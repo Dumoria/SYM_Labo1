@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             new Pair("benjamin@gmail.com","benjamin"),
             new Pair("simon@gmail.com","siomn"),
             new Pair("toto@tutu.com","tata")};
-   
+
     // GUI elements
 	private EditText email      = null;
     private Button   signIn     = null;
@@ -125,8 +125,7 @@ public class MainActivity extends AppCompatActivity {
             Log.w(TAG, "isValid(mail, passwd) - mail and passwd cannot be null !");
             return false;
         }
-		// Return true if combination valid, false otherwise
-		return (mail.equals(validEmail) && passwd.equals(validPassword));
+        return true;
 	}
 	
 	protected void showErrorDialog(String mail, String passwd) {
