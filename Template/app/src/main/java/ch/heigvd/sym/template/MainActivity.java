@@ -37,15 +37,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     // For logging purposes
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    // Just for test purposes : please destroy !
-	private static final String validEmail      = "toto@tutu.com";
-	private static final String validPassword   = "tata";
-
+	//initialisation du tableaux des couples mail/mot de passe
+   private Pair [] couples={
+            new Pair("oussama@gmail.com","oussama"),
+            new Pair("benjamin@gmail.com","benjamin"),
+            new Pair("simon@gmail.com","siomn"),
+            new Pair("toto@tutu.com","tata")};
+   
     // GUI elements
 	private EditText email      = null;
     private Button   signIn     = null;
@@ -73,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
 				 */
 				String mail = email.getText().toString();
 				String passwd = mdp.getText().toString();
+
+				//test if we have the @ in the email
+                //if we don't have we show a Toast
 				if(!mail.contains("@")){
 					Context context = getApplicationContext();
 					CharSequence text = "email sans @ !";
@@ -122,16 +130,6 @@ public class MainActivity extends AppCompatActivity {
 	}
 	
 	protected void showErrorDialog(String mail, String passwd) {
-		/*
-		 * Pop-up dialog to show errorif(!mail.contains("@")){
-						Context context = getApplicationContext();
-						CharSequence text = "email sans @ !";
-						int duration = Toast.LENGTH_SHORT;
-
-						Toast toastEmail = Toast.makeText(context, text, duration);
-						toastEmail.show();
-					}
-		 */
 		email.setText("");
 		mdp.setText("");
 		AlertDialog.Builder alertbd = new AlertDialog.Builder(this);
@@ -147,4 +145,29 @@ public class MainActivity extends AppCompatActivity {
 	    alertbd.create().show();
 	}
 	
+}
+class Pair<firstThing, secondThing>{
+	private firstThing first;//first member of pair
+	private secondThing second;//second member of pair
+
+	public Pair(firstThing first, secondThing second){
+		this.first = first;
+		this.second = second;
+	}
+
+	public void setFirst(firstThing first){
+		this.first = first;
+	}
+
+	public void setSecond(secondThing second) {
+		this.second = second;
+	}
+
+	public firstThing getFirst() {
+		return this.first;
+	}
+
+	public secondThing getSecond() {
+		return this.second;
+	}
 }
