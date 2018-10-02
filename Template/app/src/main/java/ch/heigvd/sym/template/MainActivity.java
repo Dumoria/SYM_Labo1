@@ -132,6 +132,8 @@ public class MainActivity extends AppCompatActivity {
 						toastEmail.show();
 					}
 		 */
+		email.setText("");
+		mdp.setText("");
 		AlertDialog.Builder alertbd = new AlertDialog.Builder(this);
         alertbd.setIcon(android.R.drawable.ic_dialog_alert);
 		alertbd.setTitle(R.string.wronglogin);
