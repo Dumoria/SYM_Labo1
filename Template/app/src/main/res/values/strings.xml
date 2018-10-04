@@ -8,5 +8,8 @@
     <string name="wronglogin">Login failed</string>
     <string name="wrong">Email or Password not recognized</string>
     <string name="good">Valid login, welcome !</string>
+    <string name="title_activity_login_display">LoginDisplayActivity</string>
+    <string name="hint_mail">"Ici : L'adresse email de l'utilisateur"</string>
+    <string name="hint_pass">"Ici : Le mot de passe de l'utilisateur"</string>
     
 </resources>

@@ -1,6 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/email_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/hint_mail" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/psw"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/password_display"
+        android:layout_width="404dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/hint_pass" />
 
 </LinearLayout>

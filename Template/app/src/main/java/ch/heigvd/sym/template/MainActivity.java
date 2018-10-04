@@ -25,6 +25,7 @@
  */
 package ch.heigvd.sym.template;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
    private Pair [] couples={
             new Pair("oussama@gmail.com","oussama"),
             new Pair("benjamin@gmail.com","benjamin"),
-            new Pair("simon@gmail.com","siomn"),
+            new Pair("simon@gmail.com","simon"),
             new Pair("toto@tutu.com","tata")};
 
     // GUI elements
@@ -109,10 +110,11 @@ public class MainActivity extends AppCompatActivity {
 					 * If you haven't anything more to do, you may finish()...
 					 * But just display a small message before quitting...
 					 */
-					Intent intent = new Intent(this, ch.heigvd.sym.myactivity.class);
-					 		intent.putExtra("emailEntered", mail);
-					 		intent.putExtra("passwordGiven", passwd);
-					 		this.startActivity(intent);
+						Intent intent =new Intent(MainActivity.this, LoginDisplayActivity.class);
+						intent.putExtra("emailEntered", mail);
+						intent.putExtra("passwordGiven", passwd);
+						startActivity(intent);
+
 					Toast.makeText(MainActivity.this, getResources().getString(R.string.good), Toast.LENGTH_LONG).show();
 					finish();
 				} else {
