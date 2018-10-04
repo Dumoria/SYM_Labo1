@@ -27,10 +27,12 @@ package ch.heigvd.sym.template;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.util.Pair;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -107,6 +109,10 @@ public class MainActivity extends AppCompatActivity {
 					 * If you haven't anything more to do, you may finish()...
 					 * But just display a small message before quitting...
 					 */
+					Intent intent = new Intent(this, ch.heigvd.sym.myactivity.class);
+					 		intent.putExtra("emailEntered", mail);
+					 		intent.putExtra("passwordGiven", passwd);
+					 		this.startActivity(intent);
 					Toast.makeText(MainActivity.this, getResources().getString(R.string.good), Toast.LENGTH_LONG).show();
 					finish();
 				} else {
@@ -120,12 +126,15 @@ public class MainActivity extends AppCompatActivity {
 	}
 	
 	private boolean isValid(String mail, String passwd) {
+		Pair myPair=new Pair(mail,passwd);
 
-        if(mail == null || passwd == null) {
-            Log.w(TAG, "isValid(mail, passwd) - mail and passwd cannot be null !");
-            return false;
-        }
-        return true;
+		for(int i=0;i<couples.length;i++){
+
+			if(myPair.equals(couples[i])){
+				return true;
+			}
+		}
+        return false;
 	}
 	
 	protected void showErrorDialog(String mail, String passwd) {
@@ -144,29 +153,4 @@ public class MainActivity extends AppCompatActivity {
 	    alertbd.create().show();
 	}
 	
-}
-class Pair<firstThing, secondThing>{
-	private firstThing first;//first member of pair
-	private secondThing second;//second member of pair
-
-	public Pair(firstThing first, secondThing second){
-		this.first = first;
-		this.second = second;
-	}
-
-	public void setFirst(firstThing first){
-		this.first = first;
-	}
-
-	public void setSecond(secondThing second) {
-		this.second = second;
-	}
-
-	public firstThing getFirst() {
-		return this.first;
-	}
-
-	public secondThing getSecond() {
-		return this.second;
-	}
 }
