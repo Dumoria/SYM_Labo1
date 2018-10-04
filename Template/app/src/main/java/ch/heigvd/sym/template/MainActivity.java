@@ -41,6 +41,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -82,11 +84,23 @@ public class MainActivity extends AppCompatActivity {
 				String mail = email.getText().toString();
 				String passwd = mdp.getText().toString();
 
-				//test if we have the @ in the email
-                //if we don't have we show a Toast
-				if(!mail.contains("@")){
+				// On déclare le pattern que l’on doit vérifier
+				Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
+				// On déclare un matcher, qui comparera le pattern avec la
+				// string passée en argument
+				Matcher m = p.matcher(mail);
+				// Si l’adresse mail saisie ne correspond au format d’une
+				// adresse mail on un affiche un message à l'utilisateur
+				if (!m.matches()) {
+					// Toast est une classe fournie par le SDK Android
+					// pour afficher les messages (indications) à l'intention de
+					// l'utilisateur. Ces messages ne possédent pas d'interaction avec l'utilisateur
+					// Le premier argument représente le contexte, puis
+					// le message et à la fin la durée d'affichage du Toast (constante
+					// LENGTH_SHORT ou LENGTH_LONG). Sans oublier d'appeler la méthode
+
 					Context context = getApplicationContext();
-					CharSequence text = "email sans @ !";
+					CharSequence text = "email n'est pas valide !";
 					int duration = Toast.LENGTH_SHORT;
 
 					Toast toastEmail = Toast.makeText(context, text, duration);
