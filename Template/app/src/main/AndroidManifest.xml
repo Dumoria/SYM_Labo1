@@ -21,4 +21,6 @@
             android:label="@string/title_activity_login_display" />
     </application>
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 </manifest>
