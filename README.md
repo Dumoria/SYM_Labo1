@@ -30,7 +30,7 @@ Nous devons ajouter l'image souhaitée dans le dossier <strong>res/drawable/</st
 
 <p style="text-align:justify;">
 Android prend en compte également la gestion des différents formats de densité de pixel (ou dpi), ceci pour pouvoir assurer un affichage optimisé pour chaque type d'écran.
-Il suffit donc de placer l'image souhaitée redimensionnée dans chacun des sous-dossier dpi pour afficher notre image au bon format sur l'ensemble des écrans.</p>
+Il suffit donc de placer l'image souhaitée dans chacun des sous-dossier dpi pour afficher notre image au bon format sur l'ensemble des écrans.</p>
 
 ###### 3)   <strong>Lorsque le login est réussi, vous êtes censé chaîner une autre Activity en utilisant un Intent. Si je presse le bouton "Back" de l'interface Android, que puis-je constater ? Comment faire pour que l'application se comporte de manière plus logique ? Veuillez discuter de la logique derrière les activités Android.</strong>
 <p style="text-align:justify;">
@@ -96,12 +96,12 @@ Le dossier suivant permet de gérer l'affichage en mode paysage:
 
     res/layout-land/
 
-Il nous suffit donc de créer le dossier en question et d'y mettre les ressources souhaitées pour que notre application utilise automatiquement le bon format en fonction de l'orientation de l'appareil.
+<p style="text-align:justify;">Il nous suffit donc de créer le dossier en question et d'y mettre les ressources souhaitées pour que notre application utilise automatiquement le bon format en fonction de l'orientation de l'appareil.</p>
 
 ###### 7) <strong>Le layout de l’interface utilisateur de l’activité de login qui vous a été fourni a été réalisé avec un LinearLayout à la racine. Nous vous demandons de réaliser un layout équivalent utilisant cette fois-ci un RelativeLayout.</strong>
 BIM. C'est fait.
 ###### 8)  <strong>Implémenter dans votre code les méthodes onCreate(), onStart(), onResume(), onPause(), onStop(), etc... qui marquent le cycle de vie d'une application Android, et tracez leur exécution dans le logcat. Décrivez brièvement à quelles occasions ces méthodes sont invoquées. Si vous aviez (par exemple) une connexion Bluetooth (ou des connexions bases de données, ou des capteurs activés) ouverte dans votre Activity, que faudrait-il peut-être faire, à votre avis (nous ne vous demandons pas de code ici) ?</strong>
-<p style="text-align:justify;">Il faudrait surcharger les méthodes suivantes afin d'assurer un fonctionnement correcte et sécurisé de notre application. Il faudrait par exemple être sûr que notre activité ferme la connexion Bluetooth avant de se terminer pour éviter des problèmes de sécurités.
+<p style="text-align:justify;">Il faudrait surcharger les méthodes suivantes afin d'assurer un fonctionnement correcte et sécurisé de notre application. Il faudrait par exemple être sûr que notre activité ferme la connexion Bluetooth avant de se terminer pour éviter des problèmes  de connexion non-authorisée.
 La méthode <strong>onCreate()</strong> est appelée pour créer l'activité et la configurer.
 La méthode <strong>onStart()</strong> est appelée pour démarrer l'activité. Elle va se charger de rendre visible l'activité et la prépare à passer en premier plan et devenir interactive. Cette méthode est appelée après la création de l'activité.
 La méthode <strong>onResume()</strong> est appelée lorsque l'activité est dans son état de reprise et est en premier plan. C'est dans cet état que l'utilisateur peut interagir avec l'application. L'application reste dans cet état tant que rien ne fait perdre le focus sur cette-dernière, comme le ferait par exemple un appel.
