@@ -1,9 +1,13 @@
-Lagha Oussame, Jobin Simon,
- Thomas Benjamin
+Lagha Oussame, Jobin Simon, Thomas Benjamin <div style="text-align:right;">Le 04.10.2018 </div>
+
 
 # <center> SYM_Labo1</center>
 
+## Introduction
 
+Dans le cadre de ce laboratoire, nous allons développer une application Android permettant la saisie et vérification de deux champs afin d'étudier les activités, les standards ainsi que l'implémentation de fonctions simples sur un tel support.
+
+## Questions
 
 ###### 1)   <strong>Comment organiser les textes pour obtenir une application multi-langues (français, allemand, italien, langue par défaut : anglais) ? Que se passe-t-il si une traduction est manquante dans la langue par défaut ou dans une langue supplémentaire ?</strong>
 
@@ -108,3 +112,12 @@ La méthode <strong>onResume()</strong> est appelée lorsque l'activité est dan
 La méthode <strong>onPause()</strong> permet de mettre en pause l'activité. C'est cette dernière qui est appelée dès que l'utilisateur souhaite quitter l'activité, qui passera en background sans pour autant être détruite.
 La méthode <strong>onStop()</strong> permet de stopper l'activité. Elle est appelée dès que l'activité n'est plus visible pour l'utilisateur, par exemple lorsque l'activité a fini son exécution et est sur le point d'être terminée.
 La méthode <strong>onDestroy()</strong> est appelée avant la destruction de l'activité. Ceci arrive par exemple lors d'un changement de configuration. L'activité est alors temporairement détruite par le système.
+
+## Conclusion
+
+##### Simon Jobin
+J'ai trouvé ce laboratoire inéressant car il m'a permis de prendre en main les outils rudimentaires d'une application android
+##### Oussama Lagha
+J'ai apprecié pouvoir directement travailler sur un support android et connaître les standards de la marque dans le développement d'applications.
+##### Benjamin Thomas
+Ce laboratoire fut très instructif sur le développement d'une application android et sur l'ensemble des fonctionnalités à disposition.
