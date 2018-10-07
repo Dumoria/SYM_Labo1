@@ -43,8 +43,14 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ch/heigvd/sym/template/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-393">
-              <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+            <state relative-caret-position="283">
+              <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5898#5937#0" expanded="true" />
+                <element signature="e#6814#6833#0" expanded="true" />
+                <element signature="e#6863#6877#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -52,8 +58,8 @@
       <file leaf-file-name="LoginDisplayActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ch/heigvd/sym/template/LoginDisplayActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="28" selection-end-column="38" />
+            <state relative-caret-position="167">
+              <caret line="34" column="61" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,12 +67,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-210">
-              <caret column="39" lean-forward="true" selection-start-column="39" selection-end-column="39" />
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authent.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/authent.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state />
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authent.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/authent.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="27" column="40" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="40" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authent_question7.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/authent_question7.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+              <folding>
+                <element signature="e#478#493#0" expanded="true" />
+                <element signature="e#989#1005#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -100,6 +144,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile_vertical" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -2120,9 +2171,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/login_display.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ch/heigvd/sym/template/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ch/heigvd/sym/template/LoginDisplayActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/authent_question7.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ch/heigvd/sym/template/LoginDisplayActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ch/heigvd/sym/template/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2220,6 +2272,15 @@
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Template" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-land" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -2234,6 +2295,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="sync.plugin.last.upgrade.timestamp" value="1538752216606" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Simon\Documents\HEIG\troisieme annee\SYM\SYM_Labo1\Template\app\src\main\res\layout-land" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2394,7 +2460,7 @@
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.504698" side_tool="true" visible="true" weight="0.3601695" />
-      <window_info anchor="right" id="Preview" order="0" weight="0.2590604" />
+      <window_info active="true" anchor="right" id="Preview" order="0" visible="true" weight="0.2590604" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49786553" weight="0.32932165" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4986577" weight="0.32909605" />
@@ -2402,7 +2468,7 @@
       <window_info id="Captures" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17583893" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49530202" visible="true" weight="0.3601695" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" order="6" />
@@ -2432,6 +2498,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2720">
           <caret line="160" column="24" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5898#5937#0" expanded="true" />
+            <element signature="e#6814#6833#0" expanded="true" />
+            <element signature="e#6863#6877#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2483,6 +2555,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
           <caret line="149" column="28" lean-forward="true" selection-start-line="149" selection-start-column="28" selection-end-line="149" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5898#5937#0" expanded="true" />
+            <element signature="e#6814#6833#0" expanded="true" />
+            <element signature="e#6863#6877#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2493,24 +2571,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/authent.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_display.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
@@ -2551,13 +2611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ch/heigvd/sym/template/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-393">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -2573,21 +2626,76 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_display.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/authent.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/authent.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="27" column="40" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ch/heigvd/sym/template/LoginDisplayActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="28" selection-end-column="38" />
+        <state relative-caret-position="167">
+          <caret line="34" column="61" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ch/heigvd/sym/template/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret column="39" lean-forward="true" selection-start-column="39" selection-end-column="39" />
+        <state relative-caret-position="283">
+          <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5898#5937#0" expanded="true" />
+            <element signature="e#6814#6833#0" expanded="true" />
+            <element signature="e#6863#6877#0" expanded="true" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/authent_question7.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding>
+            <element signature="e#478#493#0" expanded="true" />
+            <element signature="e#989#1005#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>

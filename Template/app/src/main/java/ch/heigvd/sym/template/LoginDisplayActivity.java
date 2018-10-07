@@ -25,9 +25,19 @@ public class LoginDisplayActivity extends Activity {
 			loginDisplay.setText(intent.getStringExtra("emailEntered"));
 			passwordDisplay.setText(intent.getStringExtra("passwordGiven"));
 
+			// charge une image depuis le stockage externe
             Bitmap bmp = BitmapFactory.decodeFile(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString() +  "/Homer_Simpson.jpg");
             photo.setImageBitmap(bmp);
 
 		}
 	}
+
+	/* Permet de revenir a l'activite precedente (question 3)
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(LoginDisplayActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    */
 }

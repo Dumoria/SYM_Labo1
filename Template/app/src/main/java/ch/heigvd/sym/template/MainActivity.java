@@ -61,8 +61,32 @@ public class MainActivity extends AppCompatActivity {
     private Button signIn = null;
     private EditText mdp = null;
 
+    protected void onStart() {
+        Log.w(TAG, "App on start");
+        super.onStart();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.w(TAG, "App on pause");
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.w(TAG, "App on resume");
+        super.onResume();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.w(TAG, "App on stop");
+        super.onStop();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.w(TAG, "App on create");
         super.onCreate(savedInstanceState);
         // Show the welcome screen / login authentication dialog
         setContentView(R.layout.authent);
@@ -131,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
 
                     Toast.makeText(MainActivity.this, getResources().getString(R.string.good), Toast.LENGTH_LONG).show();
+
+                    // A mettre en commentaire pour la question 3
                     finish();
                 } else {
                     // Wrong combination, display pop-up dialog and stay on login screen
