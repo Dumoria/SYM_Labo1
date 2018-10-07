@@ -9,7 +9,7 @@ Lagha Oussame, Jobin Simon,
 
 <p style="text-align:justify;">
 En premier lieu, il faut définir une langue par défaut. Pour cela, il faut créer un fichier <strong>strings.xml</strong> dans le dossier <strong>res/values/</strong> contenant l'ensemble des chaînes à afficher.
-Pour ajouter de nouvelle langue à notre application, on crééera des fichiers dont le chemin d'accès est de la forme:</p>
+Pour ajouter de nouvelle langue à notre application, on créera des fichiers dont le chemin d'accès est de la forme:</p>
 
     res/values-<code-pays>/strings.xml  
 <p style="text-align:justify;">
@@ -29,7 +29,7 @@ Nous devons ajouter l'image souhaitée dans le dossier <strong>res/drawable/</st
     R.drawable.nom_image
 
 <p style="text-align:justify;">
-Android prend en compte également la gestion des différents formats de densité de pixel (ou dpi), ceci pour pouvoir assurer un affichage optimisé pour chaque type d'ecran.
+Android prend en compte également la gestion des différents formats de densité de pixel (ou dpi), ceci pour pouvoir assurer un affichage optimisé pour chaque type d'écran.
 Il suffit donc de placer l'image souhaitée redimensionnée dans chacun des sous-dossier dpi pour afficher notre image au bon format sur l'ensemble des écrans.</p>
 
 ###### 3)   <strong>Lorsque le login est réussi, vous êtes censé chaîner une autre Activity en utilisant un Intent. Si je presse le bouton "Back" de l'interface Android, que puis-je constater ? Comment faire pour que l'application se comporte de manière plus logique ? Veuillez discuter de la logique derrière les activités Android.</strong>
@@ -73,8 +73,8 @@ Nous pouvons alors facilement récupérer l'IMEI en ajoutant au fichier MainActi
 	}
 ###### 5)   <strong>Vous noterez que la méthode getDeviceId() du TelephonyManager, permettant d’obtenir l’IMEI du téléphone, est dépréciée depuis la version 26 de l’API. Veuillez discuter de ce que cela implique lors du développement et de présenter une façon d’en tenir compte avec un exemple de code.</strong>
 <p style="text-align:justify;">
-Certaines méthodes deviennent dépréciée au fil du temps, que ce soit pour des raisons de sécurité, de performances ou de compabilité.
-Il est donc important lors du développement d'une application de penser à la maintenance de l'application afin que celle-ci corresponde aux standards imposé par Android. Dans le cas contraire, notre application pourrait être supprimée du store.
+Certaines méthodes deviennent dépréciées au fil du temps, que ce soit pour des raisons de sécurité, de performances ou de compatibilité.
+Il est donc important lors du développement d'une application de penser à la maintenance de l'application afin que celle-ci corresponde aux standards imposés par Android. Dans le cas contraire, notre application pourrait être supprimée du store.
 On doit également penser à la portabilité de l'application, entre les différents appareils, présent et à venir, et de leur système d'exploitation, en prévoyant d'utiliser l'une ou l'autre méthode en fonction de la version de l'appareil en question. Ceci s'illustre à travers le code suivant:</p>
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -101,9 +101,10 @@ Il nous suffit donc de créer le dossier en question et d'y mettre les ressource
 ###### 7) <strong>Le layout de l’interface utilisateur de l’activité de login qui vous a été fourni a été réalisé avec un LinearLayout à la racine. Nous vous demandons de réaliser un layout équivalent utilisant cette fois-ci un RelativeLayout.</strong>
 BIM. C'est fait.
 ###### 8)  <strong>Implémenter dans votre code les méthodes onCreate(), onStart(), onResume(), onPause(), onStop(), etc... qui marquent le cycle de vie d'une application Android, et tracez leur exécution dans le logcat. Décrivez brièvement à quelles occasions ces méthodes sont invoquées. Si vous aviez (par exemple) une connexion Bluetooth (ou des connexions bases de données, ou des capteurs activés) ouverte dans votre Activity, que faudrait-il peut-être faire, à votre avis (nous ne vous demandons pas de code ici) ?</strong>
-
-La méthode onCreate() est appelée pour créer l'activité et la configurer. On l'appel par exemple à l'appui de l'icône dans le menu pincipal de l'OS?????
-La méthode onStart() est appelée pour démarrer l'activité.
-La méthode onPause() permet de mettre en pause l'application. Cela est le cas par exemple lors du vérouillage de l'écran, d'appels, d'appui sur le bouton home.
-La méthode onStop() permet de stoper l'activité,
-La méthode onDestroy() permet de détruire l'activité
+<p style="text-align:justify;">Il faudrait surcharger les méthodes suivantes afin d'assurer un fonctionnement correcte et sécurisé de notre application. Il faudrait par exemple être sûr que notre activité ferme la connexion Bluetooth avant de se terminer pour éviter des problèmes de sécurités.
+La méthode <strong>onCreate()</strong> est appelée pour créer l'activité et la configurer.
+La méthode <strong>onStart()</strong> est appelée pour démarrer l'activité. Elle va se charger de rendre visible l'activité et la prépare à passer en premier plan et devenir interactive. Cette méthode est appelée après la création de l'activité.
+La méthode <strong>onResume()</strong> est appelée lorsque l'activité est dans son état de reprise et est en premier plan. C'est dans cet état que l'utilisateur peut interagir avec l'application. L'application reste dans cet état tant que rien ne fait perdre le focus sur cette-dernière, comme le ferait par exemple un appel.
+La méthode <strong>onPause()</strong> permet de mettre en pause l'activité. C'est cette dernière qui est appelée dès que l'utilisateur souhaite quitter l'activité, qui passera en background sans pour autant être détruite.
+La méthode <strong>onStop()</strong> permet de stopper l'activité. Elle est appelée dès que l'activité n'est plus visible pour l'utilisateur, par exemple lorsque l'activité a fini son exécution et est sur le point d'être terminée.
+La méthode <strong>onDestroy()</strong> est appelée avant la destruction de l'activité. Ceci arrive par exemple lors d'un changement de configuration. L'activité est alors temporairement détruite par le système.
